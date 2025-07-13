@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Habib Baby & Mom Club | Al Habib Pharmacy</title>
+    
+    <!-- Tailwind CSS - No need to install, loaded via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Lato for English, Tajawal for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Custom Tailwind CSS configuration for Al Habib Branding
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#004a99', // A deep, professional blue
+                        'brand-secondary': '#009ca6', // A vibrant teal accent
+                        'brand-light-bg': '#f5f7fa', // A very light, clean grey background
+                        'brand-text': '#333333',
+                        'brand-heading': '#002d5c', // A darker navy for headings
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'arabic': ['Tajawal', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light-bg text-brand-text">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brand-primary">
+                <a href="#" class="nav-link" data-page="home-page">Baby+ Club</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-lg">
+                <a class="nav-link active" data-page="home-page">Home</a>
+                <a class="nav-link" data-page="baby-health-page">Baby Health</a>
+                <a class="nav-link" data-page="mother-health-page">Mother Health</a>
+            </nav>
+            <a href="#registration-form" class="hidden md:block bg-brand-secondary text-white font-bold px-6 py-2 rounded-full hover:bg-opacity-90 transition">
+                Join Now
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-brand-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4">
+            <a class="block text-center py-2 text-lg nav-link" data-page="home-page">Home</a>
+            <a class="block text-center py-2 text-lg nav-link" data-page="baby-health-page">Baby Health</a>
+            <a class="block text-center py-2 text-lg nav-link" data-page="mother-health-page">Mother Health</a>
+            <a href="#registration-form" class="block text-center w-1/2 mx-auto mt-4 bg-brand-secondary text-white font-bold px-6 py-2 rounded-full">Join Now</a>
+        </div>
+    </header>
+
+    <!-- PAGE CONTAINER -->
+    <div id="page-content">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page">
+            <!-- HERO SECTION -->
+            <section class="relative h-[70vh] min-h-[500px] bg-cover bg-center text-white" style="background-image: url('https://images.pexels.com/photos/3995913/pexels-photo-3995913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight drop-shadow-lg font-sans">Welcome to the Al Habib Baby+ Club</h1>
+                    <p class="text-xl md:text-2xl mt-4 max-w-2xl drop-shadow-md font-arabic">شريكك الموثوق به من اليوم الأول – Your trusted partner from day one.</p>
+                    <a href="#registration-form" class="mt-8 px-8 py-4 bg-brand-primary text-white font-bold text-lg rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        Join the Club Now
+                    </a>
+                </div>
+            </section>
+
+            <main>
+                <!-- WHY JOIN SECTION -->
+                <section id="why-join" class="py-16 sm:py-24 bg-white">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-center text-brand-heading mb-12">Why Join the Baby+ Club?</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+                            <div class="bg-brand-light-bg p-6 rounded-2xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                                <i class="fas fa-gift text-4xl text-brand-secondary mb-4"></i>
+                                <h3 class="font-bold text-lg text-brand-heading">Free Welcome Gift</h3>
+                            </div>
+                            <div class="bg-brand-light-bg p-6 rounded-2xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                                <i class="fas fa-baby-carriage text-4xl text-brand-secondary mb-4"></i>
+                                <h3 class="font-bold text-lg text-brand-heading">Personalized Offers</h3>
+                            </div>
+                            <div class="bg-brand-light-bg p-6 rounded-2xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                                <i class="fas fa-user-md text-4xl text-brand-secondary mb-4"></i>
+                                <h3 class="font-bold text-lg text-brand-heading">Expert Health Tips</h3>
+                            </div>
+                            <div class="bg-brand-light-bg p-6 rounded-2xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                                <i class="fas fa-shopping-bag text-4xl text-brand-secondary mb-4"></i>
+                                <h3 class="font-bold text-lg text-brand-heading">Exclusive Bundles</h3>
+                            </div>
+                            <div class="bg-brand-light-bg p-6 rounded-2xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                                <i class="fas fa-comments text-4xl text-brand-secondary mb-4"></i>
+                                <h3 class="font-bold text-lg text-brand-heading">Trusted Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HOW IT WORKS SECTION -->
+                <section id="how-it-works" class="py-16 sm:py-24">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-center text-brand-heading mb-16">How It Works: A Simple 3-Step Journey</h2>
+                        <div class="relative flex flex-col md:flex-row justify-between items-center">
+                            <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-brand-secondary opacity-50 -translate-y-1/2"></div>
+                            <div class="relative z-10 flex flex-col items-center text-center mb-12 md:mb-0">
+                                <div class="w-24 h-24 flex items-center justify-center bg-brand-secondary rounded-full text-white text-4xl font-bold border-4 border-white shadow-lg">1</div>
+                                <h3 class="font-bold text-xl mt-4 text-brand-heading">Sign Up</h3>
+                                <p class="mt-2 max-w-xs">Provide your details and your baby's birth date to join.</p>
+                            </div>
+                            <div class="relative z-10 flex flex-col items-center text-center mb-12 md:mb-0">
+                                <div class="w-24 h-24 flex items-center justify-center bg-brand-secondary rounded-full text-white text-4xl font-bold border-4 border-white shadow-lg">2</div>
+                                <h3 class="font-bold text-xl mt-4 text-brand-heading">Get Rewards</h3>
+                                <p class="mt-2 max-w-xs">Receive monthly offers, advice, and loyalty points.</p>
+                            </div>
+                            <div class="relative z-10 flex flex-col items-center text-center">
+                                <div class="w-24 h-24 flex items-center justify-center bg-brand-secondary rounded-full text-white text-4xl font-bold border-4 border-white shadow-lg">3</div>
+                                <h3 class="font-bold text-xl mt-4 text-brand-heading">Shop & Earn</h3>
+                                <p class="mt-2 max-w-xs">Use your benefits online, in-store, or on the app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- REGISTRATION FORM SECTION -->
+                <section id="registration-form" class="py-16 sm:py-24 bg-white">
+                    <div class="container mx-auto px-6">
+                        <div class="max-w-2xl mx-auto bg-brand-light-bg p-8 sm:p-12 rounded-2xl shadow-2xl">
+                            <h2 class="text-3xl font-bold text-center text-brand-heading mb-2">Ready to Join?</h2>
+                            <p class="text-center text-brand-text mb-8">Fill out the form below to start your journey with us.</p>
+                            <form id="club-form">
+                                <div class="grid grid-cols-1 gap-6">
+                                    <input type="text" placeholder="Mother's Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                    <input type="text" placeholder="Baby's Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                    <input type="tel" placeholder="Mobile Number (e.g., 05xxxxxxxx)" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                    <input type="email" placeholder="Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                    <div>
+                                        <label class="text-sm text-brand-text mb-2 block">Baby's Date of Birth</label>
+                                        <input type="date" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                    </div>
+                                    <select required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:outline-none">
+                                        <option value="" disabled selected>Select Hospital Branch</option>
+                                        <option value="riyadh-olaya">Dr. Sulaiman Al Habib Hospital, Olaya</option>
+                                        <option value="riyadh-rayan">Dr. Sulaiman Al Habib Hospital, Ar Rayan</option>
+                                        <option value="khobar">Dr. Sulaiman Al Habib Hospital, Khobar</option>
+                                        <option value="dubai">Dr. Sulaiman Al Habib Hospital, Dubai</option>
+                                    </select>
+                                    <div class="flex items-start">
+                                        <input id="consent" type="checkbox" required class="h-5 w-5 mt-1 text-brand-primary rounded border-gray-300 focus:ring-brand-primary">
+                                        <label for="consent" class="ml-3 text-sm text-brand-text">I consent to receive offers, health tips, and marketing communications from Al Habib Pharmacy.</label>
+                                    </div>
+                                    <button type="submit" class="w-full bg-brand-primary text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                        Join Now & Get Your Welcome Gift
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="form-success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 border border-green-300 rounded-lg text-center">
+                                <p class="font-bold">Thank you for joining!</p>
+                                <p>Welcome to the Al Habib Baby+ Club. Your gift is on its way!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- TESTIMONIALS SECTION -->
+                <section id="testimonials" class="py-16 sm:py-24">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-center text-brand-heading mb-12">What Our Moms Say</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                                <i class="fas fa-quote-left text-brand-secondary text-2xl mb-4"></i>
+                                <p class="text-brand-text italic">The Al Habib Baby+ Club gave me confidence as a new mom—and amazing discounts too! The welcome gift was so thoughtful.</p>
+                                <p class="font-bold text-right mt-4 text-brand-heading">- Fatima A.</p>
+                            </div>
+                            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                                <i class="fas fa-quote-left text-brand-secondary text-2xl mb-4"></i>
+                                <p class="text-brand-text italic">I love the personalized offers. It feels like they know exactly what my baby needs at each stage. Highly recommended!</p>
+                                <p class="font-bold text-right mt-4 text-brand-heading">- Sarah K.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- BABY HEALTH PAGE -->
+        <div id="baby-health-page" class="page hidden">
+            <section class="py-16 sm:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold text-center text-brand-heading mb-4">Baby Health & Wellness</h2>
+                    <p class="text-center text-lg text-brand-text max-w-3xl mx-auto mb-16">Expert advice and resources to support your baby's healthy development from birth and beyond.</p>
+                    
+                    <!-- Articles Section -->
+                    <h3 class="text-3xl font-bold text-brand-heading mb-8">Featured Articles</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/7282352/pexels-photo-7282352.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Baby Nutrition" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Nutrition for Infants</h4>
+                                <p class="text-brand-text mt-2">Understanding the essentials of breastfeeding, formula, and introducing solid foods.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3957986/pexels-photo-3957986.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Baby Sleep" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Healthy Sleep Habits</h4>
+                                <p class="text-brand-text mt-2">Tips for establishing a sleep routine that helps your baby (and you!) rest better.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/5998463/pexels-photo-5998463.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Baby Vaccination" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Vaccination Guide</h4>
+                                <p class="text-brand-text mt-2">A clear guide to your baby's vaccination schedule and why it's important.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Videos Section -->
+                    <h3 class="text-3xl font-bold text-brand-heading mb-8">Supported Videos from Our Experts</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                           <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center"><i class="fab fa-youtube text-6xl text-gray-400"></i></div>
+                           <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">How to Swaddle Your Baby</h4>
+                                <p class="text-brand-text mt-2">A step-by-step tutorial from our pediatric nurses.</p>
+                           </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                           <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center"><i class="fab fa-youtube text-6xl text-gray-400"></i></div>
+                           <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Recognizing Teething Signs</h4>
+                                <p class="text-brand-text mt-2">Dr. Ahmed explains what to look for and how to provide comfort.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MOTHER HEALTH PAGE -->
+        <div id="mother-health-page" class="page hidden">
+             <section class="py-16 sm:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold text-center text-brand-heading mb-4">For a Healthy, Happy Mom</h2>
+                    <p class="text-center text-lg text-brand-text max-w-3xl mx-auto mb-16">Your well-being is essential. Find resources to support your physical and mental health as a new mother.</p>
+                    
+                    <!-- Articles Section -->
+                    <h3 class="text-3xl font-bold text-brand-heading mb-8">Featured Articles</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3872373/pexels-photo-3872373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Postpartum recovery" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Postpartum Recovery</h4>
+                                <p class="text-brand-text mt-2">What to expect physically and emotionally in the weeks after birth.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/4167440/pexels-photo-4167440.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mother nutrition" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Nutrition for New Moms</h4>
+                                <p class="text-brand-text mt-2">Fuel your body with the right nutrients for recovery and breastfeeding.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/4098228/pexels-photo-4098228.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mother mental health" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Caring for Your Mental Health</h4>
+                                <p class="text-brand-text mt-2">Tips for managing stress, baby blues, and knowing when to seek help.</p>
+                                <a href="#" class="text-brand-secondary font-bold mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Videos Section -->
+                    <h3 class="text-3xl font-bold text-brand-heading mb-8">Supported Videos from Our Experts</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                           <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center"><i class="fab fa-youtube text-6xl text-gray-400"></i></div>
+                           <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Simple Postpartum Exercises</h4>
+                                <p class="text-brand-text mt-2">Gentle movements to help your body recover, led by a physiotherapist.</p>
+                           </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                           <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center"><i class="fab fa-youtube text-6xl text-gray-400"></i></div>
+                           <div class="p-6">
+                                <h4 class="font-bold text-xl text-brand-heading">Mindfulness for Moms</h4>
+                                <p class="text-brand-text mt-2">A 5-minute guided meditation to help you find calm in your busy day.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-brand-heading text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Al Habib Baby+ Club</h4>
+                    <p class="text-gray-300 text-sm">Your partner in motherhood, providing care, support, and value from day one.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="nav-link hover:text-brand-secondary" data-page="home-page">Home</a></li>
+                        <li><a href="#" class="nav-link hover:text-brand-secondary" data-page="baby-health-page">Baby Health</a></li>
+                        <li><a href="#" class="nav-link hover:text-brand-secondary" data-page="mother-health-page">Mother Health</a></li>
+                        <li><a href="#registration-form" class="hover:text-brand-secondary">Join Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-secondary">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-brand-secondary">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-brand-secondary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-brand-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-brand-secondary"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
+                &copy; <span id="year"></span> Al Habib Pharmacy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Apply fonts based on language direction */
+[dir="rtl"] body { 
+    font-family: 'Tajawal', sans-serif; 
+}
+[dir="ltr"] body { 
+    font-family: 'Lato', sans-serif; 
+}
+
+/* Smooth scrolling behavior for anchor links */
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Base styles for navigation links */
+.nav-link {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding-bottom: 4px; /* Space for the border */
+    border-bottom: 2px solid transparent; /* Hidden border by default */
+}
+
+/* Style for the active navigation link */
+.nav-link.active {
+    color: #009ca6; /* brand-secondary color from Tailwind config */
+    font-weight: 700;
+    border-bottom-color: #009ca6; /* Show border for active link */
+}
+
+/* Tailwind CSS plugin for aspect ratio (for video placeholders) */
+@layer utilities {
+    .aspect-w-16 {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    .aspect-h-9 {
+        /* This class is a companion for aspect-w-16 */
+    }
+    .aspect-w-16 > * {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}

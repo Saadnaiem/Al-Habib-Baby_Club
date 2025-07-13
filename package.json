@@ -1,0 +1,42 @@
+{
+  "name": "alhabib-baby-club",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for the Al Habib Baby+ Club membership program",
+  "main": "Index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx http-server -p 8000 -c-1 -o",
+    "serve": "python -m http.server 8000",
+    "lint": "npx eslint script.js",
+    "format": "npx prettier --write *.html *.css *.js *.md"
+  },
+  "keywords": [
+    "healthcare",
+    "baby",
+    "mother",
+    "club",
+    "membership",
+    "alhabib",
+    "responsive",
+    "website"
+  ],
+  "author": "Al Habib Medical Group",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/alhabib-baby-club.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/alhabib-baby-club/issues"
+  },
+  "homepage": "https://github.com/yourusername/alhabib-baby-club#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
