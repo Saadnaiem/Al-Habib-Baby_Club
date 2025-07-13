@@ -31,12 +31,12 @@ A modern, responsive website for the Al Habib Baby+ Club membership program, des
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/alhabib-baby-club.git
+   git clone https://github.com/Saadnaiem/Al-Habib-Baby_Club.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd alhabib-baby-club
+   cd Al-Habib-Baby_Club
    ```
 
 3. Open `Index.html` in your web browser or serve it using a local server:
